@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  first-redux-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/first-redux-app
+    command: sh -c "cd first-redux-app && npm start"
+    ports:
+      - "3000:3000"
+    stdin_open: true
